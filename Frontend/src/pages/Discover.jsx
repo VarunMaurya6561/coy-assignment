@@ -237,11 +237,6 @@ if(error){
 
           </div>
 
-          <Link to='/matches'>
-            <p className="mt-2 cursor-pointer hover:underline">Your Matches</p>
-          </Link>
-
-
 
             {/*Details Popup */}
 
@@ -260,6 +255,9 @@ if(error){
           No more profiles!
         </h2>
       )}
+      <Link to='/matches'>
+            <p className="mt-2 cursor-pointer hover:underline">Your Matches</p>
+          </Link>
 
       {showMatchPopup && (
   <MatchPopup
