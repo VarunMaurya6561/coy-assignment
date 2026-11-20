@@ -119,11 +119,11 @@ Follow these steps to run the project locally.
 git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-```bash
-cd Coy
-```
 
 ### 2. Setup Backend
+
+
+### Backend Setup
 
 Navigate to the backend directory:
 
@@ -140,15 +140,24 @@ npm install
 Create a `.env` file:
 
 ```env
-PORT=5000
+PORT=3000
 MONGO_URI=your_mongodb_connection_string
 ```
+
+Seed sample profile data:
+
+```bash
+npm run seed
+```
+
+This command inserts the sample profiles provided in the Backend folder into your MongoDB database.
 
 Start the backend server:
 
 ```bash
 npm run dev
 ```
+
 
 ### 3. Setup Frontend
 

@@ -37,21 +37,22 @@ const Discover = () => {
     }
 
     fetchProfiles()
-
+    
   }, [])
 
+      
   const handleSwipe = async(action) => {
 
-      try {
-          setIsSwiping(true)
-          const response = await API.post('/profiles/swipe', {
-            userId : currentUser.userId,
-            profileId: currentProfile._id,
-            action
-          }) 
-
-          
-          SetcurrUserDet(response.data.currentUser)
+    try {
+      setIsSwiping(true)
+      const response = await API.post('/profiles/swipe', {
+        userId : currentUser.userId,
+        profileId: currentProfile._id,
+        action
+      }) 
+      
+      
+      SetcurrUserDet(response.data.currentUser)
           if (response.data.isMatch) {
             setMatchedProfile(currentProfile);
             setShowMatchPopup(true);

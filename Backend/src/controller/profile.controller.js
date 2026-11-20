@@ -16,7 +16,7 @@ export const getDiscoverProfiles = async (req, res) => {
       });
     }
 
-    console.log(currentUser.name)
+    
 
 
     const swipedProfiles = await Swipe.find({
@@ -36,6 +36,7 @@ export const getDiscoverProfiles = async (req, res) => {
       success: true,
       count: profiles.length,
       profiles,
+      currentUser
     });
   } catch (error) {
     res.status(500).json({

@@ -1,9 +1,15 @@
 
-require('dotenv').config()
-const connectDB = require('../config/db.js')
-const mongoose = require('mongoose')
-const profile = require('../models/profile.model.js')
-const profiles = require('./profiles.js')
+// const connectDB = require('../config/db.js')
+// const mongoose = require('mongoose')
+// const profile = require('../models/profile.model.js')
+// const profiles = require('./profiles.js')
+
+import dotenv from 'dotenv'
+dotenv.config()
+import mongoose from 'mongoose'
+import connectDB from '../config/db.js'
+import profiles from './profiles.js'
+import profile from '../models/profile.model.js'
 
 const seedProfiles = async () => {
     try {
@@ -14,7 +20,7 @@ const seedProfiles = async () => {
         console.log("First profile:", profiles[0]);
 
         // Remove existing profiles
-        await profile.deleteMany({});
+        // await profile.deleteMany({});
 
         // Insert sample profiles
         await profile.insertMany(profiles);
