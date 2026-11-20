@@ -131,7 +131,7 @@ if (loading) {
 
 if(error){
   return <h2 className="h-screen flex items-center justify-center text-xl sm:text-2xl font-bold text-red-600">
-          `${error}`
+          {error}
         </h2>;
 }
 
